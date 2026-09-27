@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALISA // JARVIS CORE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="scanline"></div>
+<div class="noise"></div>
+
+<header>
+    <div class="logo">
+        <div class="logo-core">A</div>
+        <div>
+            <strong>ALISA</strong>
+            <small>ARTIFICIAL INTELLIGENCE SYSTEM</small>
+        </div>
+    </div>
+
+    <div class="top-status">
+        <span class="live"></span>
+        SYSTEM ONLINE
+    </div>
+
+    <button id="fullscreen">⛶</button>
+</header>
+
+<div class="layout">
+
+    <aside class="left-panel">
+
+        <div class="panel-title">
+            SYSTEM
+            <span>01</span>
+        </div>
+
+        <div class="system-row">
+            <span>CORE</span>
+            <b>ONLINE</b>
+        </div>
+
+        <div class="system-row">
+            <span>VOICE ENGINE</span>
+            <b id="voiceStatus">READY</b>
+        </div>
+
+        <div class="system-row">
+            <span>NETWORK</span>
+            <b>SECURE</b>
+        </div>
+
+        <div class="system-row">
+            <span>AI MODEL</span>
+            <b>ALISA-X</b>
+        </div>
+
+        <div class="system-row">
+            <span>UPTIME</span>
+            <b id="uptime">00:00:00</b>
+        </div>
+
+        <div class="mini-terminal" id="terminal">
+            <div>> INITIALIZING CORE...</div>
+            <div>> LOADING VOICE ENGINE...</div>
+            <div>> SYSTEM READY</div>
+        </div>
+
+    </aside>
+
+
+    <main>
+
+        <div class="top-info">
+            <span>ALISA / COMMAND CENTER</span>
+            <span id="clock">00:00:00</span>
+        </div>
+
+        <section class="core-area">
+
+            <div class="radar">
+
+                <div class="radar-line"></div>
+
+                <div class="radar-circle r1"></div>
+                <div class="radar-circle r2"></div>
+                <div class="radar-circle r3"></div>
+
+                <div class="target t1"></div>
+                <div class="target t2"></div>
+                <div class="target t3"></div>
+
+                <div class="ai-core">
+
+                    <div class="core-glow"></div>
+
+                    <div class="core-letter">
+                        A
+                    </div>
+
+                    <div class="core-name">
+                        ALISA
+                    </div>
+
+                    <div class="core-state" id="coreState">
+                        STANDBY
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="voice-text" id="voiceText">
+                VOICE COMMAND READY
+            </div>
+
+            <div class="heard" id="heard">
+                Mikrofonni bosing...
+            </div>
+
+            <button class="mic" id="mic">
+
+                <span class="mic-symbol">◉</span>
+
+                <span>
+                    <b>ACTIVATE</b>
+                    <small>VOICE CONTROL</small>
+                </span>
+
+            </button>
+
+            <div class="equalizer" id="equalizer">
+                <i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i>
+            </div>
+
+            <div class="response">
+                <span>ALISA:</span>
+                <p id="responseText">
+                    Awaiting command...
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <aside class="right-panel">
+
+        <div class="panel-title">
+            COMMANDS
+            <span>02</span>
+        </div>
+
+        <div class="command-search">
+            <input
+                id="search"
+                placeholder="SEARCH COMMAND..."
+            >
+        </div>
+
+        <div class="commands" id="commands">
+
+            <button data-command="YouTube ni och">
+                <span>▶</span>
+                <div>
+                    <b>YOUTUBE</b>
+                    <small>YouTube ni och</small>
+                </div>
+            </button>
+
+            <button data-command="Google ni och">
+                <span>G</span>
+                <div>
+                    <b>GOOGLE</b>
+                    <small>Google ni och</small>
+                </div>
+            </button>
+
+            <button data-command="Telegram ni och">
+                <span>✈</span>
+                <div>
+                    <b>TELEGRAM</b>
+                    <small>Telegram ni och</small>
+                </div>
+            </button>
+
+            <button data-command="Instagram ni och">
+                <span>◎</span>
+                <div>
+                    <b>INSTAGRAM</b>
+                    <small>Instagram ni och</small>
+                </div>
+            </button>
+
+            <button data-command="GitHub ni och">
+                <span>◈</span>
+                <div>
+                    <b>GITHUB</b>
+                    <small>GitHub ni och</small>
+                </div>
+            </button>
+
+            <button data-command="Google da PUBG qidir">
+                <span>⌕</span>
+                <div>
+                    <b>GOOGLE SEARCH</b>
+                    <small>Google da PUBG qidir</small>
+                </div>
+            </button>
+
+            <button data-command="YouTube dan Minecraft qidir">
+                <span>⌕</span>
+                <div>
+                    <b>YOUTUBE SEARCH</b>
+                    <small>YouTube dan Minecraft qidir</small>
+                </div>
+            </button>
+
+            <button data-command="Kalkulyatorni och">
+                <span>+</span>
+                <div>
+                    <b>CALCULATOR</b>
+                    <small>Kalkulyatorni och</small>
+                </div>
+            </button>
+
+            <button data-command="Soat nechchi">
+                <span>◷</span>
+                <div>
+                    <b>TIME</b>
+                    <small>Soat nechchi?</small>
+                </div>
+            </button>
+
+            <button data-command="Bugungi sanani ayt">
+                <span>▣</span>
+                <div>
+                    <b>DATE</b>
+                    <small>Bugungi sanani ayt</small>
+                </div>
+            </button>
+
+            <button data-command="Qorong'i rejimni yoq">
+                <span>☾</span>
+                <div>
+                    <b>DARK MODE</b>
+                    <small>Qorong'i rejimni yoq</small>
+                </div>
+            </button>
+
+            <button data-command="Yordam ber">
+                <span>?</span>
+                <div>
+                    <b>HELP</b>
+                    <small>Barcha buyruqlar</small>
+                </div>
+            </button>
+
+        </div>
+
+    </aside>
+
+</div>
+
+
+<footer>
+    <span>ALISA-X CORE // 2026</span>
+    <span>VOICE INTERFACE ACTIVE</span>
+    <span id="footerStatus">WAITING</span>
+</footer>
+
+
+<div class="alert" id="alert">
+    <div class="alert-box">
+        <span>⚠</span>
+        <div>
+            <b id="alertTitle">SYSTEM</b>
+            <small id="alertText">Ready</small>
+        </div>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
